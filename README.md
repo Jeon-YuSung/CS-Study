@@ -22,7 +22,7 @@
   + UE5
     - [개인 학습 UE5](https://github.com/Jeon-YuSung/Cplusplus-UE/tree/main/Unreal_Engine5)
     - [UE5 Document](https://dev.epicgames.com/documentation/ko-kr/unreal-engine/unreal-engine-5-6-documentation)
-   + Unity
+  + Unity
     - [Unity Documentation](https://docs.unity3d.com/kr/530/Manual/)
       
 - Algorithms
