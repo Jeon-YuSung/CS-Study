@@ -1,6 +1,6 @@
 # Computer Science Basic Knowledge
 
-  컴퓨터 과학의 기초가 되는 지식 정리, 서적 및 학습하기 좋은 사이트 모음
+  컴퓨터 과학의 기초가 되는 지식 정리, 서적 추천 및 학습하기 좋은 사이트 모음
   
 --------------------------------------------------------
 - Programming
@@ -21,29 +21,40 @@
 
 - Game Engines
   + UE5
-    - [개인 학습 UE5](https://github.com/Jeon-YuSung/Cplusplus-UE/tree/main/Unreal_Engine5)
+    - [UE5 개인 학습](https://github.com/Jeon-YuSung/Cplusplus-UE/tree/main/Unreal_Engine5)
     - [UE5 Document](https://dev.epicgames.com/documentation/ko-kr/unreal-engine/unreal-engine-5-6-documentation)
   + Unity
     - [Unity Documentation](https://docs.unity3d.com/kr/530/Manual/)
-      
+   
+--------------------------------------------------------------------------------
+
 - Algorithms
   + [CLRS(Introduction to Algorithms)](https://product.kyobobook.co.kr/detail/S000213683944)
 
 - Data Structure
   + [코딩테스트를 위한 자료구조와 알고리즘 with C++](https://github.com/Jeon-YuSung/Cplusplus-UE/tree/main/CPP/Data%20Structure%20and%20Algorithm%20with%20Cpp%20for%20Coding%20Test)
   + [이것이 자료구조 + 알고리즘이다 with C언어](https://product.kyobobook.co.kr/detail/S000061585515)
-    
+  + [C언어로 쉽게 풀어 쓴 자료구조](https://product.kyobobook.co.kr/detail/S000001076349)
+
 - Computer Structure
   + [컴퓨터 밑바닥의 비밀](https://product.kyobobook.co.kr/detail/S000212650856)
+  + [혼자공부하는 컴퓨터 구조 + 운영체제](https://product.kyobobook.co.kr/detail/S000061584886)
 
 - Operating System
-
+  + [Operating System Concepts](https://product.kyobobook.co.kr/detail/S000001868743)
+  + [쉽게 배우는 운영체제](https://product.kyobobook.co.kr/detail/S000217098802)
+    
 - Database
 
 - Network
-
+  + [컴퓨터 네트워킹 하향식 접근](https://product.kyobobook.co.kr/detail/S000061694627)
+    
 - SW Engineering
 
 - Other categories
   + [Git-Books](https://git-scm.com/book/ko/v2)
-    
+  + [Clean Code](https://product.kyobobook.co.kr/detail/S000001076349)
+  + [Clean Architecture](https://product.kyobobook.co.kr/detail/S000001033082)
+  + [The Pragmatic Programmer](https://product.kyobobook.co.kr/detail/S000001033128)
+  + [이것이 취업을 위한 컴퓨터 과학이다 with CS 기술 면접](https://product.kyobobook.co.kr/detail/S000214014967)
+  + [IT 인프라 기초](https://product.kyobobook.co.kr/detail/S000216124230)
