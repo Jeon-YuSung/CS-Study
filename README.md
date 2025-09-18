@@ -53,6 +53,7 @@
 
 - Other categories
   + [Git-Books](https://git-scm.com/book/ko/v2)
+  + [GoF 디자인 패턴](https://refactoring.guru/ko/design-patterns)
   + [Clean Code](https://product.kyobobook.co.kr/detail/S000001076349)
   + [Clean Architecture](https://product.kyobobook.co.kr/detail/S000001033082)
   + [The Pragmatic Programmer](https://product.kyobobook.co.kr/detail/S000001033128)
