@@ -16,7 +16,7 @@
     - [Python Wikidocs](https://wikidocs.net/book/1)
   + C#
     - [MS C# 프로그래밍 가이드](https://learn.microsoft.com/ko-kr/dotnet/csharp/programming-guide/concepts/?redirectedfrom=MSDN)
-    - [예제로 배우는 C#](csharpstudy.com)
+    - [예제로 배우는 C# 프로그래밍](https://www.csharpstudy.com/CSharp/CSharp-intro.aspx)
     - [끝나지않은 프로그래밍 일기 C# 강좌](https://blog.hexabrain.net/tag/C%23)
 
 - Game Engines
