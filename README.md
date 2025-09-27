@@ -59,6 +59,7 @@
 
 - Operating System
   + [Operating System Concepts](https://product.kyobobook.co.kr/detail/S000001868743)
+  + [Operating System Concepts Essentials](https://product.kyobobook.co.kr/detail/S000001732281)
   + [쉽게 배우는 운영체제](https://product.kyobobook.co.kr/detail/S000217098802)
     
 - Database
