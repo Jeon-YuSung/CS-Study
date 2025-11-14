@@ -100,6 +100,7 @@
   + [다시 미분 적분](https://product.kyobobook.co.kr/detail/S000001792865)
   + [프로그래머를 위한 선형대수](https://product.kyobobook.co.kr/detail/S000001792467)
   + [스트랭 미분방정식과 선형대수학](https://product.kyobobook.co.kr/detail/S000001743718)
+  + [프로그래머를 위한 확률과 통계](https://product.kyobobook.co.kr/detail/S000001792839)
   + [Rosen의 이산수학](https://product.kyobobook.co.kr/detail/S000001693753)
     
 - Other categories
