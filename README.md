@@ -83,15 +83,12 @@
   + [Operating System Concepts Essentials](https://product.kyobobook.co.kr/detail/S000001732281)
   + [쉽게 배우는 운영체제](https://product.kyobobook.co.kr/detail/S000217098802)
     
-- Database
+- Database(SQL)
   + [혼자 공부하는 SQL](https://product.kyobobook.co.kr/detail/S000001810432)
 
 - Network
   + [컴퓨터 네트워킹 하향식 접근](https://product.kyobobook.co.kr/detail/S000061694627)
   + [혼자 공부하는 네트워크](https://product.kyobobook.co.kr/detail/S000212911507)
-
-- DataBase(SQL)
-  + [혼자 공부하는 SQL](https://product.kyobobook.co.kr/detail/S000001810432)
   
 - SW Engineering
   + [맨먼스 머신 - The Mythical Man-Month Essays on Software Engineering](https://product.kyobobook.co.kr/detail/S000001033010)
