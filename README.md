@@ -63,42 +63,54 @@
   + [코딩 테스트 합격자 되기 C++편](https://product.kyobobook.co.kr/detail/S000213087020)
   + [코딩 인터뷰 완전 분석](https://product.kyobobook.co.kr/detail/S000001033111)
   + [266가지 문제로 정복하는 코딩 인터뷰 in C++](https://product.kyobobook.co.kr/detail/S000001033120)
-    
-- Algorithms
-  + [CLRS(Introduction to Algorithms)](https://product.kyobobook.co.kr/detail/S000213683944)
-  + [논리적 사고를 기르는 알고리즘 수업](https://product.kyobobook.co.kr/detail/S000211970134)
-    
+        
 - Data Structure
   + [코딩테스트를 위한 자료구조와 알고리즘 with C++](https://github.com/Jeon-YuSung/Cplusplus-UE/tree/main/CPP/Data%20Structure%20and%20Algorithm%20with%20Cpp%20for%20Coding%20Test)
   + [이것이 자료구조 + 알고리즘이다 with C언어](https://product.kyobobook.co.kr/detail/S000061585515)
   + [C언어로 쉽게 풀어 쓴 자료구조](https://product.kyobobook.co.kr/detail/S000001076349)
+
+- Algorithms
+  + [CLRS(Introduction to Algorithms)](https://product.kyobobook.co.kr/detail/S000213683944)
+  + [논리적 사고를 기르는 알고리즘 수업](https://product.kyobobook.co.kr/detail/S000211970134)
   
 - Computer Structure
   + [컴퓨터 밑바닥의 비밀](https://product.kyobobook.co.kr/detail/S000212650856)
   + [혼자공부하는 컴퓨터 구조 + 운영체제](https://product.kyobobook.co.kr/detail/S000061584886)
+  + [컴퓨터구조론](https://product.kyobobook.co.kr/detail/S000214914086)
   + [Clean Architecture](https://product.kyobobook.co.kr/detail/S000001033082)
 
-- Operating System
+- Operating System + Linux
   + [Operating System Concepts](https://product.kyobobook.co.kr/detail/S000001868743)
   + [Operating System Concepts Essentials](https://product.kyobobook.co.kr/detail/S000001732281)
   + [쉽게 배우는 운영체제](https://product.kyobobook.co.kr/detail/S000217098802)
+  + [이것이 우분투 리눅스다](https://product.kyobobook.co.kr/detail/S000214579758)
+  + [이것이 리눅스다](https://product.kyobobook.co.kr/detail/S000201096309)
     
 - Database(SQL)
   + [혼자 공부하는 SQL](https://product.kyobobook.co.kr/detail/S000001810432)
+  + [MySQL로 배우는 데이터베이스 개론과 실습](https://product.kyobobook.co.kr/detail/S000211780865)
 
 - Network
-  + [컴퓨터 네트워킹 하향식 접근](https://product.kyobobook.co.kr/detail/S000061694627)
   + [혼자 공부하는 네트워크](https://product.kyobobook.co.kr/detail/S000212911507)
+  + [컴퓨터 네트워킹 하향식 접근](https://product.kyobobook.co.kr/detail/S000061694627)
   
 - SW Engineering
   + [맨먼스 머신 - The Mythical Man-Month Essays on Software Engineering](https://product.kyobobook.co.kr/detail/S000001033010)
-
+  + [소프트웨어 공학의 모든 것](https://product.kyobobook.co.kr/detail/S000215009355)
+    
 - Math
   + [다시 미분 적분](https://product.kyobobook.co.kr/detail/S000001792865)
   + [프로그래머를 위한 선형대수](https://product.kyobobook.co.kr/detail/S000001792467)
   + [스트랭 미분방정식과 선형대수학](https://product.kyobobook.co.kr/detail/S000001743718)
   + [프로그래머를 위한 확률과 통계](https://product.kyobobook.co.kr/detail/S000001792839)
   + [Rosen의 이산수학](https://product.kyobobook.co.kr/detail/S000001693753)
+
+- Artificial Intelligence
+  + [혼자 공부하는 머신러닝+딥러닝](https://product.kyobobook.co.kr/detail/S000216111334)
+  + [밑바닥부터 시작하는 딥러닝](https://product.kyobobook.co.kr/detail/S000215599933)
+  + [케라스 창시자에게 배우는 딥러닝](https://product.kyobobook.co.kr/detail/S000061584677)
+  + [핸즈온 머신러닝](https://product.kyobobook.co.kr/detail/S000208981368)
+  + [신경망의 기초부터 C++를 이용한 구현까지 C++로 배우는 딥러닝](https://product.kyobobook.co.kr/detail/S000000559858)
     
 - Other categories
   + [Git-Books](https://git-scm.com/book/ko/v2)
