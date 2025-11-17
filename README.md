@@ -16,8 +16,9 @@
     - [Programming: Principles and Practice Using C++](https://product.kyobobook.co.kr/detail/S000000935796)
     - [A Tour of C++ Third Edition](https://product.kyobobook.co.kr/detail/S000213611373)
     - [Effective C++](https://product.kyobobook.co.kr/detail/S000001962302)
-    - [Effective Modern C++](https://product.kyobobook.co.kr/detail/S000001033019)
+    - [Effective Modern C++](https://product.kyobobook.co.kr/detail/S000001033019) → **원서 추천** 
     - [Optimized C++](https://product.kyobobook.co.kr/detail/S000001810167)
+    - [Beautiful C++](https://product.kyobobook.co.kr/detail/S000213741864)
     - [C++ Templates](https://product.kyobobook.co.kr/detail/S000001804733)
     - [Professional C++](https://product.kyobobook.co.kr/detail/S000201305611)
 
