@@ -149,17 +149,46 @@ int *ptr = &n; // 포인터 선언
       + 스마트 포인트에는 다양한 종류가 있는데, 3가지만 알면 된다. std::unique_ptr, std::shared_ptr, std::weak_ptr (std::auto_ptr는 C++11부터 권장되지 않고, C++17에서 삭제된 기능이다.)
 
    - **std::auto_ptr**
-     + 현재 삭제된 기능인데 auto_ptr를 이해하면 unique_ptr도 이해할 수 있다. 현재 unique_ptr이 auto_ptr기능을 대신하기 때문이다. 
+     + 현재 삭제된 기능인데 auto_ptr를 이해하면 unique_ptr도 이해할 수 있다. 현재 unique_ptr이 auto_ptr기능을 대신하기 때문이다. 일단은, auto_ptr은 기본적으로 배열을 사용하지 않는 동적 할당에서 한 개체 값에 대해서만 사용해야한다. 즉, auto_ptr은 동적 할당된 배열을 삭제시키지 않는다.
+```cpp
+std::auto_ptr<int> A(new int[10]); // 1번째부터의 요소에 접근 불가, delete를 []로 하지 않음.
+
+std::auto_ptr<int> p1(new int(10));
+std::auto_ptr<int> p2 = p1; // p1의 소유권이 p2로 이동되어 p1은 nullptr이 됨
+
+~auto_ptr() {
+   delete _Myptr;
+}
+```
+auto_ptr의 소멸자는 위의 코드처럼 구현되었기 때문에, 배열 단위의 해제를 해주지 않는다. <br> 
+그리고, **복사 시 소유권을 암묵적으로 이전**되기 때문에, 예상치 못한 버그가 발생할 수 있다. 함수 인자 전달이나 반환 시 복사가 일어나면 소유권이 갑자기 다른 객체로 이전되며 원래 포인터는 무효화되기 때문에 <br>
+**복사 연산이 직관적이지 않아** 프로그램의 안전성과 유지보수를 어렵게 만들어준다. 즉, 복사 연산이 단순한 값 복사를 의미한다고 생각하는 편이지만, auto_ptr의 복사는 **소유권의 이전**을 의미하기 때문에, 표면적으로 복사처럼 보이지만 실제로는 std::move처럼 동작한다. <br>
+std::unique_ptr와 std::shared_ptr의 등장으로 인해 스마트 포인터가 개선되었고, 소유권과 공유 개념이 더 명확하게 구분되었다. 즉, unique_ptr은 복사가 불가능하고, 이동만 가능하여 더 안전하고 명확한 소유권 이전을 제공 해준다. 
+
+   - **std::unique_ptr**
+     + std::unique_ptr is a smart pointer that owns and manages another object through a pointer and disposes of that object when the unique_ptr goes out of scope. <br>
+     [CppReference_Unique_ptr](https://en.cppreference.com/w/cpp/memory/unique_ptr.html)
+     + 소유자가 **단 하나 밖에 없는** 포인터로, std::unique_ptr 포인터를 통해 다른 객체를 소유하는 스마트 포인터로 Scope를 벗어나 소멸 될 때, std::unique_ptr가 가리키는 객체도 함께 delete 해준다.
+     + 원시 포인터(naked pointer)로, 단독으로 소유하며, 원시 포인터를 누구하고도 공유하지 않기 때문에, 복사나 대입 할 수 없다.
+
+   - **std::shared_ptr**
+     + std::shared_ptr is a smart pointer that retains shared ownership of an object through a pointer. Several shared_ptr objects may own the same object. The object is destroyed and its memory deallocated when either of the following happens : the last remaining shared_ptr owning the object is destroyed;
+the last remaining shared_ptr owning the object is assigned another pointer via operator= or reset(). <br>
+[CppReference_Shared_ptr](https://en.cppreference.com/w/cpp/memory/shared_ptr.html)
+     + std::unique_ptr와 달리 자원 객체에 대한 공유 소유권(shared ownership)으로, 하나의 자원 객체를 여러 포인터 객체가 가리킬 수 있으며, 모든 포인터가 객체가 자원 객체를 필요하지 않을 때, 자원 객체를 해제하도록 설계 되었다.
+     + 하지만 어느 시점에 모든 포인터 객체가 자원 객체를 필요한지 필요 없는지를 알 수 없는데, std::shared_ptr는 자원 객체를 가리키는 포인터 객체의 수를 참조 카운트(reference count)라고 하며 관리한다. 참조 개수는 생성자가 호출되면 증가되고, 소멸자가 호출되면 감소된다. 복사 배정 연산자가 호출되면 증가, 감소 모두 수행한다.
 
 15. Call by Value의 설명
 
 16. Call by Reference의 설명 
 
-17. 형변환, 업 캐스팅, 다운 캐스팅 설명
+17. 형변환, Up Casting, Down Casting 설명
 
-18. std::function은 무엇인가?
+18. Virtual, Override 설명 
 
-19. Array와 Vector 그리고 List의 차이는?
+19. std::function은 무엇인가?
+
+20. Array와 Vector 그리고 List의 차이는?
 
 
 -------------------------------------------------------------------
