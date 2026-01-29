@@ -179,16 +179,29 @@ the last remaining shared_ptr owning the object is assigned another pointer via 
      + 하지만 어느 시점에 모든 포인터 객체가 자원 객체를 필요한지 필요 없는지를 알 수 없는데, std::shared_ptr는 자원 객체를 가리키는 포인터 객체의 수를 참조 카운트(reference count)라고 하며 관리한다. 참조 개수는 생성자가 호출되면 증가되고, 소멸자가 호출되면 감소된다. 복사 배정 연산자가 호출되면 증가, 감소 모두 수행한다.
 
 15. Call by Value의 설명
-
+   - Call by Value 혹은 Pass by Value라고 하는데, 용어만 다를 뿐 같은 개념을 뜻한다.
+   - Call by Value는 함수 호출 방식의 이름으로, Argument를 함수에 넘길 때, **값 자체를 복사해서 전달**하는 방식이고, Pass by Value는 Argument를 전달하는 방법을 표현하는 것이다. 그렇기에 호출 관점에서는 Call를, 전달 관점에서는 Pass라고도 한다.
+   - 함수 호출 시 Argument로 변수의 **복사 값을 전달**한다. 복사된 인자는 함수 안에서 지역적으로 사용되기 때문에, Local Value의 속성을 가져, 함수 안에서 **Argument 값이 변경**되더라도 **Argument는 변경되지 않는다.**
+   - 메모리 공간에서는 별도의 임시 공간에 생성되기 때문에, 함수 종료시 사라진다.
+      
 16. Call by Reference의 설명 
+   - Call by Reference도 Pass by Reference라고도 하는데, 같은 개념이다. 즉, Call by Reference는 **참조로 호출한다**로 함수가 parameter를 참조 타입으로 받아서 원본 변수를 직접 다룰 수 있도록 하는거고, Pass by Reference는 **참조로 전달한다**의미로, Argument를 함수에 넘길 때 복사본이 아니라 **원본에 대한 참조가 전달된다**
+   - 함수 호출 시 Argument로 변수의 Reference가 전달되기에, 함수 안에서 Argument 값이 변경되면 Argument 로 전달된 객체의 값도 변경된다.
+   - 선언과 동시에 초기화를 해야하며, 초기화 된 후에는 다른 변수를 참조할 수 없다. 
 
-17. 형변환, Up Casting, Down Casting 설명
+17. Casting, Up Casting, Down Casting 설명
+    - Casting
+      + 
+    - UpCasting
+      +
+    - DownCasting
+      +
 
-18. Virtual, Override 설명 
+19. Virtual, Override 설명 
 
-19. std::function은 무엇인가?
+20. std::function은 무엇인가?
 
-20. Array와 Vector 그리고 List의 차이는?
+21. Array와 Vector 그리고 List의 차이는?
 
 
 -------------------------------------------------------------------
