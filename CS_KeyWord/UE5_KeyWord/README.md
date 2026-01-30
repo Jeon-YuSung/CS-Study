@@ -147,7 +147,6 @@ Server Only는 게임 관리자에 해당하는 **GameMode**가 포함되며 Ser
 
 [액터 롤 및 리모트 롤 4.27](https://dev.epicgames.com/documentation/ko-kr/unreal-engine/actor-role-and-remoterole?application_version=4.27)
     
-  + 정리
   + 언리얼 서버는 **복제(Replicate)** 로 서버에 내용을 클라이언트들에게 복제해주는데, 개발 할 때 클라이언트가 정해야하는 것은 어떤 것은 복제를 하고, 어떤 것은 복제를 안 해야하는지를 정하는거다
   + 리플레케이트 방식에는 변수와 함수가 있다.
     - 변수 → 리플리케이트, 렙노티파이 리플리케이트 서버에서 값이 변경되면 바로 클라이언트로 동기화 된다. 렙 노티파이 서버에서 값이 변경되면 값이 변경을 호출하고 일어날 때 바인드된 OnRep 함수를 호출한다.
@@ -157,4 +156,18 @@ Server Only는 게임 관리자에 해당하는 **GameMode**가 포함되며 Ser
 Authority : 서버 <br>
 Remote : 클라이언트 
       
-6.
+6. Unreal Behavior Tree
+언리얼 AI를 하기전에, Behavior Tree을 대해 알아야하는데, 이는 AI가 어떤 행동을 하는가?를 설정하기  
+  + [언리얼 행동트리](https://dev.epicgames.com/documentation/ko-kr/unreal-engine/behavior-tree-in-unreal-engine---user-guide)
+  + Behaivor Tree
+    - 행동트리는 본질적으로 AI의 프로세서로서, 각종 결과를 내리고 그 결과를 바탕으로 다양한 분기를 실행할 수 있다.
+    - 즉, AI의 제어 엔티티의 동작을 설계하고 구현하기 위해 사용되는 시각적 프로그래밍 도구이며, Behavior Tree는 작업, 조건 및 제어 흐름을 나타내는 노드의 계층구조로 구성된다.
+
+ + Black Board
+   - AI의 두뇌로 생각할 수 있는데, 행동 트리가 결정을 내리는 데, 사용하는 Key 값을 저장한다.
+      
+7. UE5 AI
+
+  + [언리얼 인공지능](https://dev.epicgames.com/documentation/ko-kr/unreal-engine/artificial-intelligence-in-unreal-engine)
+  + 게임에서 AI... 즉, 인공지능은 여러가지 역할을 맡는데 아군 역할을 할 수도, 적군 역할을 할 수 있다. 다만 실제로 플레이어가 하는것 처럼 **똑똑한**인공지능이 되어야하지, 멍청하면 게임성이 떨어진다. 
+>>  + 참고로, AI는 Build.cs에서 AIModule 키워드를 추가해줘야한다.
