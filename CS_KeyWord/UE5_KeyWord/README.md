@@ -5,6 +5,7 @@
 [Unreal Engine5 Docs](https://dev.epicgames.com/documentation/ko-kr/unreal-engine/unreal-engine-5-7-documentation)
 
 --------------------------------------------------------------------------------
+### Basic 
 
 1. 좌표계
   - 유니티, DX, UE5등 왼손 좌표계 사용, 다만 언리얼 엔진은 **Z축이 위** <br>
@@ -38,6 +39,9 @@ UE5 좌표계 및 다양한 그래픽스 좌표계
 C++ 클래스를 블루프린트로 확장시켜 새로운 게임플레이 클래스를 코드로 구성하면, 레벨 디자이너는 이것을 기반으로 블루프린트를 통해 작업 및 변경이 가능함. <br>
 C++ 클래스와 블루프린트 시스템간의 상화작용에 영향을 끼치는 지정자가 여러가지가 있음. 
 
+---------------------------------------------------------------------------------
+### UHT & UBT
+
 3. UObject
   - C++로 class를 작성하면 UClass가 붙는데, UHT(Unreal Header Tool) 코드를 분석 <br>
   - 엔진 실행시, 분석한걸 토대로 리플랙션 데이터를 통해 CDO(Class Default Object)를 UObject로 인스턴스(객체)를 만들어주고 CDO복사해서 동적으로 사용하는 시스템.
@@ -58,6 +62,9 @@ C++ 클래스와 블루프린트 시스템간의 상화작용에 영향을 끼�
      + UBT가 C++ 컴파일러를 호출해서 캄파일 및 UHT가 만든 .generated.h 코드를 합쳐 컴파일하고, 이 결과물이 Binaries폴더에 exe랑 dll로 나옴.
      + 바이너리가 실행되면 엔진 또는 게임이 메모리에 올라가서, 모든 생성된 언리얼 오브젝트들 클래스 별로 각 기본 CDO가 메모리에 등록된다.
      + 참고로 **.generated.h는 항상 가장 마지막 밑에 include**해야한다. 아니면 인식이 제대로 안되어, 에러가 발생한다.
+
+--------------------------------------------------------------------------------
+###  Uneral Server & NetWork
 
 5. Uneral Server / Unreal NetWork
 
@@ -101,7 +108,6 @@ C++ 클래스와 블루프린트 시스템간의 상화작용에 영향을 끼�
         + 전이중(Full Duplex) → 전송이 양방향으로 동시에 일어날 수 있다.
         + 점대점(Point to Point) → 각 연결이 정확히 2개의 종단점을 가지고 있다.
         + 멀티캐스팅이나 브로드 캐스팅을 지원하지 않는다. 
-  
 
   - UDP (User Datagram Protocol)
     + **사용자 데이터그램 프로토콜**, 데이터그램은 독립적인 관계를 지니는 패킷을 뜻함.
@@ -155,19 +161,37 @@ Server Only는 게임 관리자에 해당하는 **GameMode**가 포함되며 Ser
 함수를 구현할 때 서버랑 클라이언트를 구분하는 방법은 다음과 같다. <br>
 Authority : 서버 <br>
 Remote : 클라이언트 
-      
-6. Unreal Behavior Tree
-언리얼 AI를 하기전에, Behavior Tree을 대해 알아야하는데, 이는 AI가 어떤 행동을 하는가?를 설정하기  
-  + [언리얼 행동트리](https://dev.epicgames.com/documentation/ko-kr/unreal-engine/behavior-tree-in-unreal-engine---user-guide)
+
+--------------------------------------------------------------------------------
+### UE5 Artificial Intelligence
+
+6. UE5 AI
+
+게임에서 중요한 요소중 하나가 상호작용이라고 생각하는데, 게임속에서 몬스터 어그로를 끌거나, 어려운 패턴을 가진 보스를 잡거나 혹은 NPC가 선택을 해서 세계선이 바뀌거나 등... 게임속의 룰/오브젝트와 상호작용하여 목표를 달성하는게 게임이고, 액터가 마치 지능이 있는 것처럼 행동하도록 설계하는 기능을 언리얼 엔진의 AI라고 한다. 또한, 인공지능은 여러가지 역할을 맡는데 아군 역할을 할 수도, 적군 역할을 할 수 있다. 다만 실제로 플레이어가 하는것 처럼 **똑똑한**인공지능이 되어야하지, 멍청하면 게임성이 떨어진다. 
+  
+  + 언리얼의 AI는 보통 3가지 오브젝트로 구성된다.
+  + AI Controller → 게임속 AI 액터를 찾아서 움직이도록 조작
+  + Behavior Tree → 상황에 따라 판단하도록 알고리즘, 혹은 행동을 지정해주는 역할.
+  + Black Board → AI의 뇌 역할로, AI가 해야하는 일의 정보와 Key 값 등의 저장하는 공간
+  + 참고로, AI는 Build.cs에서 **AIModule**키워드를 추가해줘야하고, 보통은 AIController는 C++클래스로, Behavior Tree와 Black Board는 에디터에서 생성하는 편이다. 
+  + [언리얼 인공지능](https://dev.epicgames.com/documentation/ko-kr/unreal-engine/artificial-intelligence-in-unreal-engine)
+
+7. Unreal Behavior Tree
+
+언리얼 AI를 하기전에, Behavior Tree을 대해 알아야하는데, 이는 AI가 어떤 행동을 하는가?를 설정하기위해서 Behavior Tree라는걸 설정해줘야한다.   
+  
   + Behaivor Tree
     - 행동트리는 본질적으로 AI의 프로세서로서, 각종 결과를 내리고 그 결과를 바탕으로 다양한 분기를 실행할 수 있다.
     - 즉, AI의 제어 엔티티의 동작을 설계하고 구현하기 위해 사용되는 시각적 프로그래밍 도구이며, Behavior Tree는 작업, 조건 및 제어 흐름을 나타내는 노드의 계층구조로 구성된다.
+    - 크게 4가지로 나눌 수 있는데 Composite, Task, Decorator, Services
+    - Composite → 컴포짓 노드는 분기의 루트와 분기가 실행되는 방식의 기본 규칙을 정의. 즉, 컴포짓에 Decorator를 적용하여 분기 진입을 수정하거나 실행을 중도에 취소할 수 있으며, 자식이 실행 중일 때만 활성화 되는 Service도 어태치할 수 있다. 
+    - Decorator → 조건문 해당 분기를 실행하지 종료할지....등 여러 조건문을 만들 수 있다. 그리하여 조건식이라고도 하며, Composite이나 Task 노드에 어태치되어 트리에 있는 분기 또는 단일 노드를 실행할 수 있는지 여부를 정의한다. 
+    - Services → Composite이나 Task에 어태치되며, 분기가 실행 중인 동안, 정의된 빈도로 실행된다. 보통 블랙보드의 확인 및 업데이트에 사용된다. 
+    - Task → AI가 행동할 노드. 즉, AI를 이동하거나 블랙보드 값을 조정하는 등 각종 '작업'을 수행하는 노드이며, 테스크에 Decorator나 Services를 어태치할 수 있다. 
 
  + Black Board
-   - AI의 두뇌로 생각할 수 있는데, 행동 트리가 결정을 내리는 데, 사용하는 Key 값을 저장한다.
+   - AI의 두뇌로 생각할 수 있는데, 행동 트리가 결정을 내리는 데, 사용하는 Key 값을 저장한다. 즉, AI가 의사결정에 필요한 정보를 주고받도록 도와주는 데이터 저장소이다.
+   
+  + [언리얼 행동트리](https://dev.epicgames.com/documentation/ko-kr/unreal-engine/behavior-tree-in-unreal-engine---user-guide)
       
-7. UE5 AI
-
-  + [언리얼 인공지능](https://dev.epicgames.com/documentation/ko-kr/unreal-engine/artificial-intelligence-in-unreal-engine)
-  + 게임에서 AI... 즉, 인공지능은 여러가지 역할을 맡는데 아군 역할을 할 수도, 적군 역할을 할 수 있다. 다만 실제로 플레이어가 하는것 처럼 **똑똑한**인공지능이 되어야하지, 멍청하면 게임성이 떨어진다. 
->>  + 참고로, AI는 Build.cs에서 AIModule 키워드를 추가해줘야한다.
+8. Unreal Navigation System
