@@ -193,5 +193,6 @@ Remote : 클라이언트
    - AI의 두뇌로 생각할 수 있는데, 행동 트리가 결정을 내리는 데, 사용하는 Key 값을 저장한다. 즉, AI가 의사결정에 필요한 정보를 주고받도록 도와주는 데이터 저장소이다.
    
   + [언리얼 행동트리](https://dev.epicgames.com/documentation/ko-kr/unreal-engine/behavior-tree-in-unreal-engine---user-guide)
+  + 추가로 주의해야할 점이 있는데, 언리얼4에서는 블랙보드랑 행동 트리를 직접 다 지정해줘야 했지만, 언리얼5는 **행동 트리**만 설정하면 되기에 버전을 꼭 확인하는 것이 좋다.  
       
 8. Unreal Navigation System
